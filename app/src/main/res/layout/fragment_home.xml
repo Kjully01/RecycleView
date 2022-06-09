@@ -7,12 +7,22 @@
     tools:context=".controller.fragment.HomeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvPrimary"
+        android:id="@+id/rvSecond"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/layout_recycle_view_second"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvSecond"
         tools:listitem="@layout/layout_recycle_view_primary"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

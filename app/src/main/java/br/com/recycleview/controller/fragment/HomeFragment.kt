@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.recycleview.controller.adapter.ImagesAdapter
+import br.com.recycleview.controller.adapter.ImagesSecondAdapter
 import br.com.recycleview.databinding.FragmentHomeBinding
 import java.util.*
 
@@ -14,6 +15,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapterRecycleView: ImagesAdapter
+    private lateinit var adapterSecondRecycleView: ImagesSecondAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,10 +38,17 @@ class HomeFragment : Fragment() {
             layoutManager = LinearLayoutManager(context)
             adapter = adapterRecycleView
         }
+
+        binding.rvSecond.apply {
+            adapterSecondRecycleView = ImagesSecondAdapter()
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            adapter = adapterSecondRecycleView
+        }
     }
 
     private fun setDataAdapter() {
         adapterRecycleView.setData(listUrls())
+        adapterSecondRecycleView.setData(listUrls())
     }
 
     private fun listUrls(): List<Pair<String, String>> = listOf(
