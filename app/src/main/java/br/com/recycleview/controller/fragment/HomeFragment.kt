@@ -147,6 +147,102 @@ class HomeFragment : Fragment() {
         Pair(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
             "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+        ),
+        Pair(
+            "https://picsum.photos/id/${rand(0, 100)}/200/300",
+            "https://picsum.photos/id/${rand(0, 100)}/200/300"
         )
 
     )
