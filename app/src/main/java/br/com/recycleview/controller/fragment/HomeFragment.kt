@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.recycleview.controller.adapter.ImagesAdapter
-import br.com.recycleview.controller.adapter.ImagesSecondAdapter
 import br.com.recycleview.databinding.FragmentHomeBinding
 import java.util.*
 
@@ -15,7 +14,6 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapterRecycleView: ImagesAdapter
-    private lateinit var adapterSecondRecycleView: ImagesSecondAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,211 +36,112 @@ class HomeFragment : Fragment() {
             layoutManager = LinearLayoutManager(context)
             adapter = adapterRecycleView
         }
-
-        binding.rvSecond.apply {
-            adapterSecondRecycleView = ImagesSecondAdapter()
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = adapterSecondRecycleView
-        }
     }
 
     private fun setDataAdapter() {
         adapterRecycleView.setData(listUrls())
-        adapterSecondRecycleView.setData(listUrls())
     }
 
-    private fun listUrls(): List<Pair<String, String>> = listOf(
-        Pair(
+    private fun listUrls(): List<Triple<String, String, String>> = listOf(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Maria",
+            "(31)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "João",
+            "(31)94665-1234"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Pedro",
+            "(31)1234-5485"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Karen",
+            "(31)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Miguel",
+            "(33)3465-5647"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Davi",
+            "(33)2658-2341"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Bernado",
+            "(31)3215-4631"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Sarah",
+            "(31)4230-1232"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Laura",
+            "(31)2035-0331"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Maria Clara",
+            "(33)1520-8654"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Aurora",
+            "(31)9584-6345",
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Sofia",
+            "(31)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Mateus",
+            "(33)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Thiago",
+            "(31)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Géssica",
+            "(31)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Túlio",
+            "(31)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Brenda",
+            "(31)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Gabriel",
+            "(31)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Thaís",
+            "(31)9584-6345"
         ),
-        Pair(
+        Triple(
             "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
-        ),
-        Pair(
-            "https://picsum.photos/id/${rand(0, 100)}/200/300",
-            "https://picsum.photos/id/${rand(0, 100)}/200/300"
+            "Bia",
+            "(31)9584-6345"
         )
 
     )

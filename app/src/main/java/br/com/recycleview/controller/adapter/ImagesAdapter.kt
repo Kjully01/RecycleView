@@ -4,15 +4,15 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import br.com.recycleview.databinding.LayoutRecycleViewPrimaryBinding
+import br.com.recycleview.databinding.LayoutRecycleViewBinding
 import coil.load
 
 class ImagesAdapter: RecyclerView.Adapter<ImagesAdapter.ViewHolderImages>() {
 
-    private var imageList : MutableList<Pair<String, String>> = arrayListOf()
+    private var imageList : MutableList<Triple<String, String, String>> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderImages {
-        val itemBinding = LayoutRecycleViewPrimaryBinding.inflate(LayoutInflater.from(parent.context))
+        val itemBinding = LayoutRecycleViewBinding.inflate(LayoutInflater.from(parent.context))
         return ViewHolderImages(itemBinding)
     }
 
@@ -23,17 +23,17 @@ class ImagesAdapter: RecyclerView.Adapter<ImagesAdapter.ViewHolderImages>() {
     override fun getItemCount(): Int = imageList.size
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(imageListAux: List<Pair<String, String>>){
+    fun setData(imageListAux: List<Triple<String, String, String>>){
         imageList.clear()
         imageList.addAll(imageListAux)
         notifyDataSetChanged()
     }
 
-    class ViewHolderImages(val layout : LayoutRecycleViewPrimaryBinding) : RecyclerView.ViewHolder(layout.root){
-        fun onBind(imageInfo: Pair<String, String>){
-            layout.tvPrimary.text = imageInfo.first
-            layout.ivPrimary.load(imageInfo.second)
-
+    class ViewHolderImages(val layout : LayoutRecycleViewBinding) : RecyclerView.ViewHolder(layout.root){
+        fun onBind(imageInfo: Triple<String, String, String>){
+            layout.photo.photoItem.load(imageInfo.first)
+            layout.tvName.text = imageInfo.second
+            layout.tvTell.text = imageInfo.third
         }
     }
 }
