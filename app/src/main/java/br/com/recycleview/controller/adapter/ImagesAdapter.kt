@@ -29,11 +29,13 @@ class ImagesAdapter: RecyclerView.Adapter<ImagesAdapter.ViewHolderImages>() {
         notifyDataSetChanged()
     }
 
-    class ViewHolderImages(val layout : LayoutRecycleViewBinding) : RecyclerView.ViewHolder(layout.root){
+    class ViewHolderImages(val binding : LayoutRecycleViewBinding) : RecyclerView.ViewHolder(binding.root){
         fun onBind(imageInfo: Triple<String, String, String>){
-            layout.photo.photoItem.load(imageInfo.first)
-            layout.tvName.text = imageInfo.second
-            layout.tvTell.text = imageInfo.third
+            binding.apply {
+                photo.photoItem.load(imageInfo.first)
+                tvName.text = imageInfo.second
+                tvTell.text = imageInfo.third
+            }
         }
     }
 }

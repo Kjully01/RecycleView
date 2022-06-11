@@ -23,8 +23,8 @@
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
                 app:layout_constraintStart_toEndOf="@id/photo"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Nome" />
@@ -33,7 +33,7 @@
                 android:id="@+id/tvTell"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="12dp"
                 app:layout_constraintStart_toStartOf="@id/tvName"
                 app:layout_constraintBottom_toBottomOf="@id/photo"
                 tools:text="Número" />
